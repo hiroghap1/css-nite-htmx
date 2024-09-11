@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Nite</title>
+    <script src="https://unpkg.com/htmx.org@2.0.1"
+        integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+        crossorigin="anonymous"></script>
+        <style>
+            main::before {
+                content: 'テスト';
+            }
+        </style>
+</head>
+
+<body>
+    <header hx-get="./template/header.html" hx-trigger="load" hx-swap="outerHTML"></header>
+    <main class="main">メイン
+        <button hx-get="./template/main.html"
+        hx-trigger="click"
+        hx-target="#target-div"
+        hx-swap="innerHTML">コンテンツを取得</button>
+        <div id="target-div"></div>
+    </main>
+    <footer hx-get="./template/footer.html" hx-trigger="load" hx-swap="outerHTML"></footer>
+</body>
+
+</html>

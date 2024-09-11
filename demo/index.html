@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmxデモサイト</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/htmx.org@2.0.1"
+    integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header hx-get="./template/header.html" hx-trigger="load" hx-swap="outerHTML"></header>
+    <main class="pb-8">
+        <div class="px-4 py-16 bg-black text-white" style="background-image: linear-gradient(#1f1f1f, #2d2d2d);">
+            <h1 class="text-4xl text-center font-bold text-8xl">             
+                   <span class="mr-1">&lt;<span class="px-1 text-[#3d72d7]">/</span>&gt;</span>
+                   <span>htm<span class="text-[#3d72d7]">x</span></span>
+                </h1>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 py-8">
+            <p class="text-xl mb-8">htmxを使用すると、最新のブラウザ機能を利用して、AJAXやCSS Transitions、WebSocketsなどを直接HTMLマークアップで利用できます。</p>
+            <section class="py-8">
+                <h2 class="text-3xl font-semibold mb-3">モチベーション</h2>
+                <div class="p-6 rounded-lg">
+                    <p class="text-lg mb-4">
+                        htmxは、現代のウェブ開発の複雑さを軽減し、HTMLの力を最大限に引き出すことを目指しています。
+                    </p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>JavaScriptの複雑さを減らす</li>
+                        <li>サーバーサイドのレンダリングを簡素化</li>
+                        <li>REST APIの必要性を最小限に</li>
+                        <li>シンプルで直感的なウェブ開発体験を提供</li>
+                    </ul>
+                    <p class="mt-4 text-lg">
+                        htmxを使用することで、開発者はHTMLに焦点を当て、より効率的で保守しやすいウェブアプリケーションを構築できます。
+                    </p>
+                </div>
+            </section>
+            <section class="py-8">
+                <h2 class="text-2xl font-semibold mb-4">特徴</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>軽量 (~14k min.gz'd)</li>
+                    <li>依存関係なし</li>
+                    <li>IE11互換</li>
+                    <li>サーバーに依存しない</li>
+                </ul>
+            </section>
+            <section class="py-8">
+                <h2 class="text-2xl font-semibold mb-4">クイックスタート</h2>
+                <pre class="bg-gray-100 p-4 rounded-lg"><code>&lt;script src="https://unpkg.com/htmx.org@1.9.6"&gt;&lt;/script&gt;
+&lt;button hx-post="/clicked" hx-swap="outerHTML"&gt;
+クリックしてください
+&lt;/button&gt;</code></pre>
+            </section>
+            <section class="py-8">
+                <h2 class="text-2xl font-semibold mb-4">さらに詳しく</h2>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">ドキュメントを読む</a>
+                    <a href="#" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">例を見る</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer hx-get="./template/footer.html" hx-trigger="load" hx-swap="outerHTML"></footer>
+</body>
+</html>
